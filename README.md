@@ -33,13 +33,13 @@
 - **PlayerJoinEvent**
 - **PlayerQuitEvent**
 ## Paramètres:
-> ***prefix* >** '&7&l[&6&lTribordia&2&lGrades&7&l]'
-> ***lang* >** 'fr'
-> ***gui* >** true
+> ***prefix* >** '&7&l[&6&lTribordia&2&lGrades&7&l]'  
+> ***lang* >** 'fr'  
+> ***gui* >** true  
 ## Groupes:
 #### Groupe par défaut:
-> ***prefix* >** '&7'
-> ***suffix* >** ''
-> ***separator* >** '&7&l>'
-> ***default* >** true
-> ***permissions* >** []
+> ***prefix* >** '&7'  
+> ***suffix* >** ''  
+> ***separator* >** '&7&l>'  
+> ***default* >** true  
+> ***permissions* >** []  

@@ -28,3 +28,18 @@
 > ***/grade setposition [name] [position]* >** Définir la position dans le "tab" d'un grade.  
 > ***/grade addpermission [grade] [permission]* >** Ajouter une permission à un grade.  
 > ***/grade removepermission [grade] [permission]* >** Retirer une permission à un grade.  
+## Évènements:
+- **AsyncPlayerChatEvent**
+- **PlayerJoinEvent**
+- **PlayerQuitEvent**
+## Paramètres:
+> ***prefix* >** '&7&l[&6&lTribordia&2&lGrades&7&l]'
+> ***lang* >** 'fr'
+> ***gui* >** true
+## Groupes:
+#### Groupe par défaut:
+> ***prefix* >** '&7'
+> ***suffix* >** ''
+> ***separator* >** '&7&l>'
+> ***default* >** true
+> ***permissions* >** []

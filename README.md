@@ -6,10 +6,10 @@
 4. **Groupes**
 5. **Langages disponibles**
 ### Commandes:
-> ### Configuration
+> ##### Configuration
 > ***/tribordiagrades config setprefix [prefix]* >** Définir le préfix du plugin.  
 > ***/tribordiagrades config gui [true/false]* >** Activer / Désactiver les GUI.
-> ### Gestion des grades  
+> #### Gestion des grades  
 > ***/grade* >** Ouvrir le menu.
 > ***/grade help* >** Afficher la liste des actions disponibles.  
 > ***/grade create [name]* >** Créer un grade.  
@@ -21,5 +21,5 @@
 > ***/grade setposition [name] [position]* >** Définir la position dans le "tab" d'un grade.  
 > ***/grade addpermission [grade] [permission]* >** Ajouter une permission à un grade.  
 > ***/grade removepermission [grade] [permission]* >** Retirer une permission à un grade.  
-> ### Gestion de la langue  
+> #### Gestion de la langue  
 > ***/tribordiagrades lang set [lang]* >** Définir la langue par défaut.

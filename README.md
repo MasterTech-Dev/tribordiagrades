@@ -44,6 +44,6 @@
 > ***default* >** true  
 > ***permissions* >** []  
 ## Langues disponibles:
-> ***fr* >** Langue française
-> ***en* >** Langue anglaise
+> ***fr* >** Langue française  
+> ***en* >** Langue anglaise  
 > ***de* >** Langue allemande

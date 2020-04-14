@@ -1,0 +1,7 @@
+main: mt.tribodia.grades.Main
+name: TribordiaGrades
+version: 1.0.0
+api-version: 1.9
+author: MasterTech
+description: Gestion des grades du serveur SkyBlock.
+load: POSTWORLD

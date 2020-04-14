@@ -2,9 +2,15 @@
 ## Table des matières:
 1. **Présentation**
 2. **Commandes**
-3. **Paramètres**
-4. **Groupes**
-5. **Langages disponibles**
+3. **Évènements**
+4. **Paramètres**
+5. **Groupes**
+6. **Langages disponibles**
+## Présentation:
+> Le plugin est dédié à la gestion des grades et de la langue.  
+> Il peut être utilisé comme librairie afin de récupérer la langue sélectionnée par un joueur sans avoir besoin d'utiliser des centaines de lignes de codes.  
+> Il est vous est possible de créer autant de grades que souhaités.  
+> La configuration est simple et intuitive. Vous pourrez configurer vos grades à l'aide d'un menu si l'option est active dans la configuration.
 ## Commandes:
 > ### Configuration:
 > ***/tribordiagrades config setprefix [prefix]* >** Définir le préfix du plugin.  

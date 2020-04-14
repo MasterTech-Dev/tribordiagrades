@@ -43,3 +43,7 @@
 > ***separator* >** '&7&l>'  
 > ***default* >** true  
 > ***permissions* >** []  
+## Langues disponibles:
+> ***fr* >** Langue française
+> ***en* >** Langue anglaise
+> ***de* >** Langue allemande

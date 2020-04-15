@@ -1,0 +1,15 @@
+# =============================================================== #
+# Configuration par défaut du plugin Grades de Tribordia (v1.0.0) #
+# Développé par MasterTech | Inspiré par SachOscarGaming (© 2020) #
+# Propulsé sous la license MIT                                    #
+# =============================================================== #
+
+# =============================================== #
+#                                                 #
+#              CONFIGURATION GLOBALE              #
+#                                                 #
+# =============================================== #
+prefix: "&7&l[&6&lTribotdia&2&lGrades&7&l]" # L'espace final sera rajouté s'il n'a pas été configuré au préalable.
+guis: true # true +> Les GUI seront utilisés. | false +> La configuration se fera par commande uniquement.
+logs: true # true +> Les logs seront envoyés. | false +> Les logs standard uniquement seront envoyés (en anglais).
+lang: "fr" # Langue par défaut du plugin.

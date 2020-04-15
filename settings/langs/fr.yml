@@ -1,0 +1,59 @@
+logs:
+  settings_loaded: 'Tous les paramètres ont été chargés.' # Info > Automatiquement affiché en Bleu
+events:
+  join:
+    first_join_message: "&6&l%player%&a a rejoint le serveur pour le première fois ;)" # %player% > Remplacé par le nom du joueur
+    join_message: "&6&l%player%&a a rejoint le serveur." # %player% > Remplacé par le nom du joueur
+  leave:
+    leave_message: "&4&l%player%&c a quitté le serveur." # %player% > Remplacé par le nom du joueur
+chat:
+  mention: "&4&l%player%&c vous a mentionné dans son message." # %player% > Remplacé par le nom du joueur
+guis:
+  menu_confirm: "&a&lConfirmation"
+  menu_grade_main: "&6&lGrades"
+  menu_grade_modify: "&6&lGrades > &8&lModifier"
+  menu_grade_remove_permission: "&6&lGrades > &c&lPermissions"
+items:
+  global:
+    confirm:
+      icon:
+        name: "&e&l&oVous confirmez ?"
+      confirm:
+        name: "&a&lOui"
+        lores:
+          - "&7Cliquez pour confirmer votre choix."
+      cancel:
+        name: "&c&lNon"
+        lores:
+          - "&7Cliquez pour annuler l'action."
+    close:
+      name: "&c&lFermer"
+      lores:
+        -  "&7Cliquez pour fermer."
+  menu_grades_main:
+    create:
+      name: "&b&lCréer"
+      lores:
+        - "&7Cliquez pour créer un grade."
+      click_message: "&7&lEntrez le nom du grade dans le chat. (&4&lx&7&l pour annuler)"
+      no_permission: "&c&lVous n'avez pas la permission de créer un grade!"
+      grade_already_created: "&c&lLe grade &4&l%grade%&c&l existe déjà!" # %grade% > Remplacé par le nom du grade
+    modify:
+      name: "&7&lModifier"
+      lores:
+        - "&7Cliquez pour modifier un grade."
+      click_message: "&7&lEntrez le nom du grade dans le chat. (&4&lx&7&l pour annuler)"
+      no_permission: "&c&lVous n'avez pas la permission de modifier un grade!"
+      grade_does_not_exist: "&c&lLe grade &4&l%grade%&c&l n'existe pas!" # %grade% > Remplacé par le nom du grade
+    list:
+      name: "&e&lAfficher la liste"
+      lores:
+        - "&7Cliquez pour afficher la liste"
+        - "&7des grades."
+    delete:
+      name: "&c&lSupprimer"
+      lores:
+        - "&7Cliquez pour afficher la liste"
+        - "&7des grades que vous pouvez supprimer."
+  #menu_grade_modify:
+  #menu_grade_remove_permission:

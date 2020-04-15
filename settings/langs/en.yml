@@ -1,0 +1,59 @@
+logs:
+  settings_loaded: 'All settings have been loaded.' # Info > Automaticaly displayed in Blue
+events:
+  join:
+    first_join_message: "&6&l%player%&a joined the server for the first time ;)" # %player% > Replaced by player's name
+    join_message: "&6&l%player%&a joined the server." # %player% > Replaced by player's name
+  leave:
+    leave_message: "&4&l%player%&c leaved the server." # %player% > Replaced by player's name
+chat:
+  mention: "&4&l%player%&c mentioned you in his message." # %player% > Replaced by player's name
+guis:
+  menu_confirm: "&a&lConfirmation"
+  menu_grade_main: "&6&lGrades"
+  menu_grade_modify: "&6&lGrades > &8&lModify"
+  menu_grade_remove_permission: "&6&lGrades > &c&lPermissions"
+items:
+  global:
+    confirm:
+      icon:
+        name: "&e&l&oDo you confirm ?"
+      confirm:
+        name: "&a&lYes"
+        lores:
+          - "&7Click to confirm your choice."
+      cancel:
+        name: "&c&lNo"
+        lores:
+          - "&7Click to cancel the action."
+    close:
+      name: "&c&lClose"
+      lores:
+        -  "&7Click to close."
+  menu_grades_main:
+    create:
+      name: "&b&lCreate"
+      lores:
+        - "&7Click to create a grade."
+      click_message: "&7&lEnter the grade's name in the chat (&4&lx&7&l to cancel)"
+      no_permission: "&c&lYou do not have permission to create a grade!"
+      grade_already_created: "&c&lGrade &4&l%grade%&c&l already exists!" # %grade% > Replace by grade's name
+    modify:
+      name: "&7&lModify"
+      lores:
+        - "&7Click to modify a grade."
+      click_message: "&7&lEnter the grade's name in the chat (&4&lx&7&l to cancel)"
+      no_permission: "&c&lYou do not have permission to modify a grade!"
+      grade_does_not_exist: "&c&lGrade &4&l%grade%&c&l does not exist!" # %grade% > Remplacé par le nom du grade
+    list:
+      name: "&e&lSDisplay the list"
+      lores:
+        - "&7Click to display the list"
+        - "&7of grades."
+    delete:
+      name: "&c&lDelete"
+      lores:
+        - "&7Click to display the list"
+        - "&7of grades that you can delete."
+  #menu_grade_modify:
+  #menu_grade_remove_permission:

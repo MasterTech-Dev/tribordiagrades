@@ -1,0 +1,7 @@
+default:
+  prefix: "&7"
+  suffix: ""
+  separator: "&7&l>"
+  position: ""
+  default: true
+  permissions: []

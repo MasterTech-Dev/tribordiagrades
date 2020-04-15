@@ -1,7 +1,42 @@
 main: mt.tribodia.grades.Main
 name: TribordiaGrades
+author: MasterTech
 version: 1.0.0
 api-version: 1.9
-author: MasterTech
-description: Gestion des grades du serveur SkyBlock.
 load: POSTWORLD
+description: Gestion des grades du serveur SkyBlock.
+permissions:
+  tribordia.*:
+    description: Attribuer toutes les permissions du plugin.
+    children:
+      tribordia.chat.*: true
+  tribordia.chat.*:
+    description: Attribuer toutes les permissions relatives au chat.
+    children:
+      tribordia.chat.colors: true
+      tribordia.chat.mentions: true
+  tribordia.grades.*:
+    description: Attribuer toutes les permissions relatives aux grades.
+    children:
+      tribordia.grades.create: true
+      tribordia.grades.modify: true
+      tribordia.grades.list: true
+      tribordia.grades.delete: true
+  tribordia.chat.colors:
+    description: Écrire en couleur dans le chat
+  tribordia.chat.mentions:
+    description: Mentionner des joueurs dans le chat.
+  tribordia.grades.create:
+    description: Créer un grade.
+  tribordia.grades.modify:
+    description: Modifier un grade.
+  tribordia.grades.list:
+    description: Afficher la liste des grades.
+  tribordia.grades.delete:
+    description: Supprimer un grade.
+commands:
+  grade:
+    description: Gérer les grades du serveur.
+    usage: /grade
+    aliases:
+      - g

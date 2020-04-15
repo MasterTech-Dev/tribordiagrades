@@ -10,6 +10,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
+import org.bukkit.scheduler.BukkitRunnable;
 
 import mt.tribordia.grades.Main;
 import mt.tribordia.grades.accounts.Account;
@@ -32,22 +33,29 @@ public class AccountManager {
 	private void create(Player player) {
 		UUID uuid = player.getUniqueId();
 		File file = new File(this.main.getDataFolder() + "/assigns", uuid.toString() + ".yml");
-		if (!file.exists()) {
-			try {
-				file.createNewFile();
-				FileConfiguration config = YamlConfiguration.loadConfiguration(file);
-				
-				Grade grade = this.main.getGradeManager().getDefault();
-				String lang = this.main.getDefaultLang();
-				
-				config.set("grade", grade.getName());
-				config.set("lang", lang);
-				this.accounts.put(uuid, new Account(uuid, grade, lang));
-				
-				config.save(file);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+		try {
+			file.createNewFile();
+			new BukkitRunnable() {
+				@Override
+				public void run() {
+					FileConfiguration config = YamlConfiguration.loadConfiguration(file);
+					
+					Grade grade = main.getGradeManager().getDefault();
+					String lang = main.getDefaultLang();
+					
+					config.set("grade", grade.getName());
+					config.set("lang", lang);
+					
+					try {
+						config.save(file);
+						accounts.put(uuid, new Account(uuid, grade, lang));
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+			}.runTaskLater(main, 5L);
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 	private void load(Player player) {

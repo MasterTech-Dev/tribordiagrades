@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.bukkit.scheduler.BukkitRunnable;
+import org.bukkit.scoreboard.Team;
 
 import mt.tribordia.grades.Main;
 import mt.tribordia.grades.grades.Grade;
@@ -53,7 +54,9 @@ public class GradeManager {
 		Grade grade = new Grade(name, prefix, suffix, separator, position, defaultState, permissions);
 		
 		if (this.isReady(name)) {			
-			this.main.getTabOrder().registerNewTeam(getFinalPosition(position));
+			Team team = this.main.getTabOrder().registerNewTeam(getFinalPosition(position));
+			team.setPrefix(prefix.replace("&", "§"));
+			team.setSuffix(suffix.replace("&", "§"));
 			this.grades.put(name, grade);
 		}
 		
@@ -103,7 +106,7 @@ public class GradeManager {
 		return this.grades.containsKey(name);
 	}
 	public boolean isReady(String name) {
-		return !this.main.getGradesConfig().getString("position").equals("");
+		return !this.main.getGradesConfig().getString(name + ".position").equals("");
 	}
 	
 	public String getFinalPosition(String position) {

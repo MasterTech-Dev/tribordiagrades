@@ -39,8 +39,8 @@ public class Account {
 	}
 	public void setNameTag() {
 		Player player = Bukkit.getPlayer(owner);
-		player.setPlayerListName(getNameTag());
 		Main.INSTANCE.getTabOrder().getTeam(Main.INSTANCE.getGradeManager().getFinalPosition(this.grade.getPosition())).addPlayer(player);
+		player.setDisplayName(this.getNameTag());
 		for (Player p : Bukkit.getOnlinePlayers()) p.setScoreboard(Main.INSTANCE.getTabOrder());
 	}
 	

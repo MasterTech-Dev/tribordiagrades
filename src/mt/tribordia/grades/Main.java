@@ -30,9 +30,9 @@ public class Main extends JavaPlugin {
 	// > Global
 	public static Main INSTANCE; // Default class instance
 	public Map<UUID, PermissionAttachment> attachments; // Players permissions
-	public Map<Player, String> create,                                             // Create a grade
-																modify,                                            // Modify a grade
-																delete = new HashMap<>(); // Delete a grade
+	public Map<Player, String> create = new HashMap<>(),   // Create a grade
+																modify = new HashMap<>(),  // Modify a grade
+																delete = new HashMap<>();   // Delete a grade
 	private Scoreboard tabOrder; // Default tab order
 	// > Managers
 	private ConsoleManager consoleManager; // Console manager
@@ -79,6 +79,8 @@ public class Main extends JavaPlugin {
 		this.configurationFile = new File(this.getDataFolder() + "/settings", "configuration.yml"); // Load settings file
 		if (!this.configurationFile.exists()) this.saveResource("settings/configuration.yml", false); // Create it if does not exists
 		this.configuration = YamlConfiguration.loadConfiguration(this.configurationFile); // Load settings configuration access
+		
+		if (!new File(this.getDataFolder() + "/assigns").exists()) new File(this.getDataFolder() + "/assigns").mkdir(); 
 
 		this.consoleManager.sendInfo("Loading all settings...", true); // *LOG*
 		this.prefix =this. configuration.getString("prefix") + (this.configuration.getString("prefix").endsWith(" ") ? "" : " "); // Load prefix appearance
@@ -104,10 +106,12 @@ public class Main extends JavaPlugin {
 		this.guiManager.create(new GUIGradeMain(this));
 	}
 	private void loadGrades() {
-		tabOrder = Bukkit.getScoreboardManager().getMainScoreboard();
+		tabOrder = Bukkit.getScoreboardManager().getNewScoreboard();
 		this.gradesFile = new File(this.getDataFolder() + "/settings", "grades.yml");
 		if (!this.gradesFile.exists()) this.saveResource("settings/grades.yml", false);
 		this.gradesConfig = YamlConfiguration.loadConfiguration(this.gradesFile);
+		
+		for (String key : this.gradesConfig.getKeys(false)) if (this.gradeManager.isReady(key)) this.gradeManager.load(key);
 	}
 	private void loadAccounts() {
 		for (Player player : Bukkit.getOnlinePlayers()) this.accountManager.login(player);

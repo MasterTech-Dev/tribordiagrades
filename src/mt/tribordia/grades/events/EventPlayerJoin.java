@@ -6,6 +6,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.scheduler.BukkitRunnable;
 
 import mt.tribordia.grades.Main;
 
@@ -21,9 +22,14 @@ public class EventPlayerJoin implements Listener {
 		Player player = event.getPlayer();
 		event.setJoinMessage(null);
 		
-		boolean first = this.main.getAccountManager().isRegistered(player.getName());
+		boolean first = !this.main.getAccountManager().isRegistered(player.getName());
 		this.main.getAccountManager().login(player);
-		for (Player p : Bukkit.getOnlinePlayers())
-			p.sendMessage(this.main.getPrefix() + this.main.getLanguageManager().getMessage(this.main.getLanguageManager().getLang(p), "events.join." + (first ? "first_join_message" : "join_message")).replace("%player%", player.getName()));
+		new BukkitRunnable() {
+			@Override
+			public void run() {
+				for (Player p : Bukkit.getOnlinePlayers())
+					p.sendMessage(main.getPrefix() + main.getLanguageManager().getMessage(main.getLanguageManager().getLang(p), "events.join." + (first ? "first_join_message" : "join_message")).replace("%player%", player.getName()));
+			}
+		}.runTaskLater(main, 10L);
 	}
 }

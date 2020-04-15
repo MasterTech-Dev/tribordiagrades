@@ -1,4 +1,4 @@
-main: mt.tribodia.grades.Main
+main: mt.tribordia.grades.Main
 name: TribordiaGrades
 author: MasterTech
 version: 1.0.0
